@@ -1,0 +1,15 @@
+home_services /
+car_services /
+property_rental/
+queue / 
+delivery
+street_assistant /
+
+
+
+      {id:40 , Label:'Battery operation'},
+      {id:36 , Label:'Wheel repair'},
+      {id:35 , Label:'Car transport'},
+      {id:37 , Label:'Car unlock'},
+      {id:39 , Label:'Fuel delivery'},
+      {id:38 , Label:'General maintenance'}
