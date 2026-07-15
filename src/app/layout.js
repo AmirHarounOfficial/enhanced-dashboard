@@ -24,6 +24,7 @@
 //   );
 // }
 
+import { Suspense } from "react";
 import { Readex_Pro } from "next/font/google";
 import "./globals.css";
 
@@ -44,7 +45,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ar" dir="rtl">
       <body className={`${readexPro.variable} antialiased`}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Suspense fallback={null}>{children}</Suspense>
+        </Providers>
       </body>
     </html>
   );

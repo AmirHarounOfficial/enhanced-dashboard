@@ -52,7 +52,7 @@ export default function MapDialog({ open, handleClose, onConfirm }) {
     try {
       // استخدام Reverse Geocoding للحصول على العنوان الفعلي
       const response = await fetch(
-        `/api/geocode?lat=${mapPosition[0]}&lon=${mapPosition[1]}`
+        `https://nominatim.openstreetmap.org/reverse?format=json&lat=${mapPosition[0]}&lon=${mapPosition[1]}&accept-language=ar&addressdetails=1`
       );
       const data = await response.json();
       

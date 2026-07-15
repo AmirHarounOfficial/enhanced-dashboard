@@ -1,0 +1,16 @@
+[build]
+  command = "npm run build"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "20"
+  # The build is memory-heavy; give Node a larger heap to avoid OOM.
+  NODE_OPTIONS = "--max-old-space-size=4096"
+
+# Static export writes one HTML file per route (trailingSlash makes them
+# directory index.html). Client-side query params (?id=) work as-is.
+# Fallback so unknown deep links still return the app instead of a hard 404.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
